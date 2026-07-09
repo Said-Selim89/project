@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="../static/styles.css">
+</head>
+<body>
+    <main class="main">
+    <h1 class="soo">Введите данные</h1><br>
+
+    <form action="/create_base" class="form" method="POST"> 
+        <input type="text" name="title" id="title" class="title" placeholder="Пиши название"><br>
+        <input type="text" name="text" id="text" class="text" placeholder="Пиши техт"><br>
+        <input type="submit" name="button" id="button">
+    </form>
+    </main>
+
+    <header class="header">
+    <h2>Это записи в базе данных</h2>
+
+    <div class="parents">
+
+    {% for info in infos %}
+    <div class="conteiner">
+        <p>id: {{info.id}}</p>
+        <hr>
+        <p>title: {{info.title }}</p>
+        <hr>
+        <p>text: {{info.text }}</p>
+        <a class="delete" href="/delete/{{info.id}}">Удалить</a>
+    </div>
+    {% endfor %}
+
+    </div>
+
+    </header>
+
+</body>
+</html>
