@@ -2,7 +2,7 @@
 from sqlalchemy import Text, String
 from sqlalchemy.orm import Mapped, mapped_column
 from datetime import datetime
-from database import db
+from app.models.database import db
 
 
 
