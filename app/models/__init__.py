@@ -1,1 +1,2 @@
-from models.info import Info
+from .info import Info
+from .user import User

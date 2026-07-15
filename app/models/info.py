@@ -1,11 +1,7 @@
-
 from sqlalchemy import Text, String
 from sqlalchemy.orm import Mapped, mapped_column
 from datetime import datetime
-from app.models.database import db
-
-
-
+from database import db
 
 class Info(db.Model):
     __tablename__ = 'infos'
